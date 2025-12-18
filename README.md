@@ -9,3 +9,11 @@
 # The "Union" Trick
 - To store data when allocated, but a pointer when free, we can conceptually treat the block as a *union*.
 ![alt text](image.png)
+
+```
+g++ -std=c++17 -O2 -g -fsanitize=address pool_allocator.cpp -o pool_alloc
+```
+
+```
+g++ -std=c++17 -O2 -g -fsanitize=address object_pool.cpp -o object_pool
+```
